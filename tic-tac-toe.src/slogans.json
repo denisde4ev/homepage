@@ -1,0 +1,34 @@
+index.html [1-9].html o[1-9][1-9].html [1-9][1-9].html: "Still 100% static site"
+> sed 's/Who knows who made a move, I'\''m not keeping a log!/Still 100% static site/' o[1-9][1-9].html [1-9][1-9].html  -i
+
+
+>> BAD: *[1-9]*[1-9]*[1-9]*.html: "I forgot, where did X placed first?"
+```
+for i in *[1-9]*[1-9]*[1-9]*.html; do case $i in *[1-9]*[1-9]*[1-9]*[1-9]*.html) continue;; esac;   printf %s\\0 "$i"; done |\
+xargs  -0 -r -- sed 's/Who knows who made a move, I'\''m not keeping a log!/I forgot, where did X placed first?/' -i --
+```
+
+
+o12345678.html: "!neppah neve taht did woH"
+123456789.html: "How did that even happen!"
+123x456789.html: "Close but next time you'll draw it like streat graffite!"
+o123o4567x8x9.html: "Stop drawing stuff like this!"
+1x2x3456o789.html: "When its cold"
+o1234x6789.html: "One move left!"
+o1234x5x6789.html: "OVERKILL!"
+
+o1o23x4x5x6x78o9.html: ```
+        <style>
+        blink { animation: blink 1s steps(1) infinite; }
+        @keyframes blink { 50% { color: transparent; } }
+        </style>
+        
+        <font size=5 color=white>
+          <blink>
+          !!! CONGRATULATIONS !!!<br>
+          </blink>
+          THIS IS THE LONGEST NOTATION IN MY INPLEMENTATION!<br>
+          o1o23x4x5x6x78o9
+        </font>
+```
+"Ha?!"
