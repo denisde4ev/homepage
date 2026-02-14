@@ -1,7 +1,12 @@
-index.html [1-9].html o[1-9][1-9].html [1-9][1-9].html:
-"Still 100% static site"
+index.html [1-9].html o[1-9][1-9].html [1-9][1-9].html: "Still 100% static site"
+> sed 's/Who knows who made a move, I'\''m not keeping a log!/Still 100% static site/' o[1-9][1-9].html [1-9][1-9].html  -i
 
-*[1-9]*[1-9]*[1-9]*.html: "I forgot, where did X placed first?"
+
+>> BAD: *[1-9]*[1-9]*[1-9]*.html: "I forgot, where did X placed first?"
+```
+for i in *[1-9]*[1-9]*[1-9]*.html; do case $i in *[1-9]*[1-9]*[1-9]*[1-9]*.html) continue;; esac;   printf %s\\0 "$i"; done |\
+xargs  -0 -r -- sed 's/Who knows who made a move, I'\''m not keeping a log!/I forgot, where did X placed first?/' -i --
+```
 
 
 o12345678.html: "!neppah neve taht did woH"
