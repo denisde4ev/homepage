@@ -1,6 +1,8 @@
 index.html [1-9].html o[1-9][1-9].html [1-9][1-9].html:
 "Still 100% static site"
 
+*[1-9]*[1-9]*[1-9]*.html: "I forgot, where did X placed first?"
+
 
 o12345678.html: "!neppah neve taht did woH"
 123456789.html: "How did that even happen!"
@@ -8,7 +10,7 @@ o12345678.html: "!neppah neve taht did woH"
 o123o4567x8x9.html: "Stop drawing stuff like this!"
 1x2x3456o789.html: "When its cold"
 o1234x6789.html: "One move left!"
-o1234x5x6789.html: "OVERKIL!"
+o1234x5x6789.html: "OVERKILL!"
 
 o1o23x4x5x6x78o9.html: ```
         <style>
