@@ -61,7 +61,7 @@ function generate(moves,    board, i, pos, winner, turn, actions_log, status_tex
     }
     
     # Construct complete HTML
-    html = "<html>\n" \
+    html = "<html lang="en">\n" \
     "<!-- https://www.transparenttextures.com/patterns/stardust.png -->\n" \
     "<body bgcolor=\"#E0E0E0\" text=\"#333333\" link=\"#8B0000\" vlink=\"#550000\" alink=\"#FF0000\">\n" \
     "\n" \

@@ -100,7 +100,7 @@ function generateHtml(board, filename) {
         tableRows += "          </tr>\n";
     }
 
-    const html = `<html>
+    const html = `<html lang="en">
 
 <body bgcolor="#E0E0E0" text="#333333" link="#8B0000" vlink="#550000" alink="#FF0000">
 
