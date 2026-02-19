@@ -71,113 +71,113 @@ function generateHtml(board, filename) {
     
     let statusText = "";
     if (winner === 'draw') {
-        statusText = "<b>IT'S A DRAW!</b>";
+        statusText = "<B>IT'S A DRAW!</B>";
     } else if (winner) {
-        statusText = `<b>PLAYER ${winner} WINS!</b>`;
+        statusText = `<B>PLAYER ${winner} WINS!</B>`;
     } else {
-        statusText = `<b>PLAYER ${turn} TURN</b>`;
+        statusText = `<B>PLAYER ${turn} TURN</B>`;
     }
-
+ 
     let tableRows = "";
     for (let r = 0; r < 3; r++) {
-        tableRows += "          <tr>\n";
+        tableRows += "          <TR>\n";
         for (let c = 0; c < 3; c++) {
             const idx = r * 3 + c;
             
             if (board[idx]) {
-                tableRows += `           <td align="center" bgcolor="#9BBC0F">${board[idx]}</td>\n`;
+                tableRows += `           <TD ALIGN="center" BGCOLOR="#9BBC0F">${board[idx]}</TD>\n`;
             } else if (winner) {
-                tableRows += `           <td align="center" bgcolor="#9BBC0F">&nbsp;&nbsp;</td>\n`;
+                tableRows += `           <TD ALIGN="center" BGCOLOR="#9BBC0F">&nbsp;&nbsp;</TD>\n`;
             } else {
                 // If we click here, what is the NEXT state?
                 const nextBoard = [...board];
                 nextBoard[idx] = turn;
                 const nextFilename = getFilename(nextBoard);
                 
-                tableRows += `           <td align="center" bgcolor="#9BBC0F"><button formaction="${nextFilename}.html">&nbsp;&nbsp;</button></td>\n`;
+                tableRows += `           <TD ALIGN="center" BGCOLOR="#9BBC0F"><BUTTON FORMACTION="${nextFilename}.html">&nbsp;&nbsp;</BUTTON></TD>\n`;
             }
         }
-        tableRows += "          </tr>\n";
+        tableRows += "          </TR>\n";
     }
-
-    const html = `<html lang="en">
+ 
+    const html = `<HTML LANG="en">
 <!-- https://www.transparenttextures.com/patterns/stardust.png -->
-<body bgcolor="#E0E0E0" text="#333333" link="#8B0000" vlink="#550000" alink="#FF0000">
-
-  <center>
-
-   <br><br>
-
-   
-   <!-- Top Navigation (Game Boy Style) -->
-   <table width="100%" bgcolor="#999999" cellspacing="0" cellpadding="5" border="0">
-    <tr>
-     <td align="center">
-      <font face="Courier New, Courier, monospace" size="4">
-       <b>
-       [ <a href="../index.html">START</a> ] &nbsp;&nbsp;
-       [ <a href="../blog.html">SELECT</a> ] &nbsp;&nbsp;
-       [ <a href="../portfolio.html">ITEMS</a> ] &nbsp;&nbsp;
-       [ <a href="../cyber.html">LINK</a> ] &nbsp;&nbsp;
-       [ <a href="../nature.html">WORLD</a> ] &nbsp;&nbsp;
-       [ <a href="../hotdog.html">FOOD</a> ] &nbsp;&nbsp;
-       [ <a href="../cards.html">CARD</a> ]
-       </b>
-      </font>
-     </td>
-    </tr>
-   </table>
-   
-   <br><br>
-
-   <!-- Screen Bezel -->
-   <table width="600" border="0" cellpadding="20" cellspacing="0" bgcolor="#505050">
-    <tr>
-     <td align="center" colspan="100">
-      
-      <!-- Screen Area -->
-      <table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#9BBC0F"> <!-- Classic GB Greenish tint or just grey #C0C0C0 -->
-       <tr>
-        <td align="center">
-         
-         <font face="Verdana, Geneva, sans-serif" size="6" color="#0F380F"><b>TIC-TAC-TOE</b></font>
-         <br>
-         <font face="Courier New, Courier, monospace" size="2" color="#306230"><i>ver. 1.0</i></font>
-         <br><br>
-         
-         <!-- Game Board -->
-         <form method="GET">
-         <table border="4" cellpadding="10" cellspacing="5" bgcolor="#0F380F" bordercolor="#0F380F">
-${tableRows}         </table>
-         </form>
-         
-         <br>
-         <font face="Courier New, monospace" size="3" color="#0F380F">${statusText}</font>
-         
-        </td>
-       </tr>
-      </table>
-      
-     </td>
-    </tr>
-
-    <!-- Bottom Controls Decoration -->
-    <tr>
-      <td align="center">
-        <br>
-        <br>
-      </td>
-    </tr>
-   </table>
-
-   <br>
-   <br>
-   <font face="Arial" size="1" color="#666666">Still 100% static site!</font>
-
-  </center>
-
- </body>
-</html>
+<BODY BGCOLOR="#E0E0E0" TEXT="#333333" LINK="#8B0000" VLINK="#550000" ALINK="#FF0000">
+ 
+  <CENTER>
+ 
+    <BR><BR>
+ 
+    
+    <!-- Top Navigation (Game Boy Style) -->
+    <TABLE WIDTH="100%" BGCOLOR="#999999" CELLSPACING="0" CELLPADDING="5" BORDER="0">
+     <TR>
+      <TD ALIGN="center">
+       <FONT FACE="Courier New, Courier, monospace" SIZE="4">
+        <B>
+        [ <A HREF="../index.html">START</A> ] &nbsp;&nbsp;
+        [ <A HREF="../blog.html">SELECT</A> ] &nbsp;&nbsp;
+        [ <A HREF="../portfolio.html">ITEMS</A> ] &nbsp;&nbsp;
+        [ <A HREF="../cyber.html">LINK</A> ] &nbsp;&nbsp;
+        [ <A HREF="../nature.html">WORLD</A> ] &nbsp;&nbsp;
+        [ <A HREF="../hotdog.html">FOOD</A> ] &nbsp;&nbsp;
+        [ <A HREF="../cards.html">CARD</A> ]
+        </B>
+       </FONT>
+      </TD>
+     </TR>
+    </TABLE>
+    
+    <BR><BR>
+ 
+    <!-- Screen Bezel -->
+    <TABLE WIDTH="600" BORDER="0" CELLPADDING="20" CELLSPACING="0" BGCOLOR="#505050">
+     <TR>
+      <TD ALIGN="center" COLSPAN="100">
+       
+       <!-- Screen Area -->
+       <TABLE WIDTH="100%" BORDER="0" CELLPADDING="10" CELLSPACING="0" BGCOLOR="#9BBC0F"> <!-- Classic GB Greenish tint or just grey #C0C0C0 -->
+        <TR>
+         <TD ALIGN="center">
+          
+          <FONT FACE="Verdana, Geneva, sans-serif" SIZE="6" COLOR="#0F380F"><B>TIC-TAC-TOE</B></FONT>
+          <BR>
+          <FONT FACE="Courier New, Courier, monospace" SIZE="2" COLOR="#306230"><I>ver. 1.0</I></FONT>
+          <BR><BR>
+          
+          <!-- Game Board -->
+          <FORM METHOD="GET">
+          <TABLE BORDER="4" CELLPADDING="10" CELLSPACING="5" BGCOLOR="#0F380F" BORDERCOLOR="#0F380F">
+ ${tableRows}         </TABLE>
+          </FORM>
+          
+          <BR>
+          <FONT FACE="Courier New, monospace" SIZE="3" COLOR="#0F380F">${statusText}</FONT>
+          
+         </TD>
+        </TR>
+       </TABLE>
+       
+      </TD>
+     </TR>
+ 
+     <!-- Bottom Controls Decoration -->
+     <TR>
+       <TD ALIGN="center">
+         <BR>
+         <BR>
+       </TD>
+     </TR>
+    </TABLE>
+ 
+    <BR>
+    <BR>
+    <FONT FACE="Arial" SIZE="1" COLOR="#666666">Still 100% static site!</FONT>
+ 
+  </CENTER>
+ 
+ </BODY>
+</HTML>
 `;
     return html;
 }

@@ -65,7 +65,7 @@ var convert = spawn('convert', [inputfile, '-compress', 'none', '-depth', '8', '
 var out = fs.createWriteStream(outputfile);
 
 // Write HTML Table Start
-out.write(`<table>
+out.write(`<TABLE>
 `);
 
 const toHex = n => n.toString(16).padStart(2, '0');
@@ -92,7 +92,7 @@ convert.on('close', code => {
 		stderr(`convert process exited with code ${code}`);
 		// try to close cleanly anyway
 	}
-	out.write('</table>\n');
+	out.write('</TABLE>\n');
 	out.end();
 });
 
@@ -145,7 +145,7 @@ function processBuffer() {
 		} else if (state === 2) { // MaxVal
 			maxVal = parseInt(token);
 			state = 3;
-			out.write('<tr>'); // Start first row
+			out.write('<TR>'); // Start first row
 			col = 0;
 			row = 0;
 		} else if (state === 3) { // Body RGB
@@ -156,15 +156,15 @@ function processBuffer() {
 				var b = values[2];
 				
 				var hex = `#${toHex(Number(r))}${toHex(Number(g))}${toHex(Number(b))}`;
-				out.write(`<td bgcolor="${hex}"></td>`);
+				out.write(`<TD BGCOLOR="${hex}"></TD>`);
 				values = [];
 				
 				col++;
 				if (col >= width) {
-					out.write('</tr>');
+					out.write('</TR>');
 					row++;
 					if (row < height) {
-						out.write('\n<tr>');
+						out.write('\n<TR>');
 					}
 					col = 0;
 				}

@@ -80,10 +80,10 @@ DDDDD
 
 */
 
-out.write(`<svg
-width="100%" height="2000"
-xmlns="http://www.w3.org/2000/svg"><foreignObject width="100%" height="100%" font-size="0">
-<pre xmlns="http://www.w3.org/1999/xhtml"><font color="gray" size="3"><center>`);
+out.write(`<SVG
+WIDTH="100%" HEIGHT="2000"
+XMLNS="http://www.w3.org/2000/svg"><FOREIGNOBJECT WIDTH="100%" HEIGHT="100%" FONT-SIZE="0">
+<PRE XMLNS="http://www.w3.org/1999/xhtml"><FONT COLOR="gray" SIZE="3"><CENTER>`);
 
 
 
@@ -108,7 +108,7 @@ for (var y = 0; y < height; y++) {
 
 
 
-out.write(`</center></font></pre></foreignObject></svg>`);
+out.write(`</CENTER></FONT></PRE></FOREIGNOBJECT></SVG>`);
 
 
 out.end(() => {
